@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+ 
+<p>Tebak Angka dari 1 sampai 10</p> 
+
+<p id="output"></p>
+
+<input type="text" id="input" placeholder="Masukkan Angka"></input>
+<button onclick="guess()">Tebak</button> 
+
+<script> 
+var randomNumber = Math.floor(Math.random() * 10) + 1; 
+var output = document.getElementById("output");
+var input = document.getElementById("input");
+
+function guess() {
+  if (input.value == randomNumber) {
+    output.innerHTML = "Tebakan Anda Benar!";
+  } else {
+    output.innerHTML = "Tebakan Anda Salah, coba lagi";
+  }
+}
+</script> 
+ 
+</body> 
+</html> 
